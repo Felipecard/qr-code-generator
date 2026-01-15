@@ -4,9 +4,7 @@ Um gerador de QR codes dinâmico e customizável, construído com Next.js e Type
 
 
 
-https://img.shields.io/badge/Next.js-14-black?logo=next.js 
-https://img.shields.io/badge/TypeScript-5-blue?logo=typescript
-https://img.shields.io/badge/React-18-blue?logo=react
+![qr-code](https://raw.githubusercontent.com/Felipecard/qr-code-generator/refs/heads/main/public/qr-image.png)
 
 ✨ Funcionalidades
 🎨 Customização completa de cores - Altere a cor principal e de fundo
