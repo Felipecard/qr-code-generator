@@ -1,0 +1,218 @@
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: linear-gradient(180deg, #DBEAFE, #ADD0FF);
+    gap: 32px;
+
+    .title-container {
+        position: relative;
+        
+        .page-title {
+            font-weight: 600;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        span {
+            color: #4F46E5;
+        }
+
+        .arrow-detail {
+            position: absolute;
+            right: -90px;
+            height: 130px;
+            top: 10px;
+            transform: rotate(-10deg);
+        }
+    }
+
+    .qr-code-container {
+        background-color: #F8FAFC;
+        padding: 12px;
+        border-radius: 12px;
+        display: flex;
+        gap: 12px;
+        width: 700px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+        .qr-code, .qr-code-container {
+            background-color: white;
+            padding: 18px;
+            border-radius: 12px;
+            width: 50%;
+        }
+
+        .qr-code {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .link-input {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+
+                label {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                input {
+                    padding: 10px;
+                    border: 1px solid #E2E8F0;
+                    border-radius: 8px;
+                    font-size: 14px;
+
+                    &:focus {
+                        outline: 1px solid #4F46E5 ;
+                    }
+                }
+            }
+
+            .qr-code-preview {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+        }
+
+        .qr-code-customization {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .customization-container {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                .input-container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 14px;
+
+                    .input-box {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+
+                        label {
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+                        .input-file {
+                            opacity: 0;
+                            position: absolute;
+                            z-index: 2;
+                            height: 60px;
+                            cursor: pointer;
+                        }
+                        .input-file-button {
+                            position: relative;
+                            z-index: 1;
+                            background-color: #4F46E5;
+                            border-radius: 8px;
+                            padding: 8px 12px;
+                            color: white;
+                            display: flex;
+                            gap: 4px;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            font-size: 14px;
+                            width: fit-content;
+                        }
+
+                        #LogoSize {
+                            background-color: #F8FAFC;
+                            border: 1px solid #E2E8F0;
+                            padding: 8px 12px;
+                            border: 8px;
+                            appearance: none;
+                            background-image: url("../../public/chevron-down.svg");
+                            background-repeat: no-repeat;
+                            background-position: right 12px center;
+                            background-size: 18px;
+
+                            &:focus {
+                                outline: 1px solid #4F46E5;   
+                            }     
+                        }
+                    }
+                }
+
+                .input-container.colors {
+                    flex-direction: row;
+                    gap: 32px;
+
+                    .input-color {
+                        border: none;
+                        background-color: transparent;
+                        height: 30px;
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .download-button {
+                background-color: #4F46E5;
+                color: white;
+                border-radius: 8px;
+                border: none;
+                padding: 12px 24px;
+                cursor: pointer;
+                font-weight: 600;
+                transition: background-color 0.3s;
+                margin-top: 14px;
+
+                &:hover {
+                    background-color: #4338ca;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 32px 5%;
+        gap: 16px;
+
+        .title-container {
+            .arrow-detail {
+                display: none;
+            }
+        }
+
+        .qr-code-container {
+            flex-direction: column;
+            width: 100%;
+
+            .qr-code {
+                width: 100%;
+            }
+
+            .qr-code-customization  {
+                width: 100%;
+                gap: 12px;
+            }
+        }
+    }
+}
+   
